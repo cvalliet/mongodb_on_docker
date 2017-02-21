@@ -9,6 +9,15 @@ MONGODB_PATH=/opt/mongodb/$MONGODB_NAME
 
 DOCKER_TAG=mongodb_$MONGODB_NAME
 
+echo "MONGODB Docker container"
+echo ""
+echo "PARAMETERS"
+echo ""
+echo " * IMAGE NAME :" $DOCKER_TAG
+echo " * DB PATH    :" $MONGODB_PATH
+echo " * DB PORT    :" $MONGODB_PORT
+echo ""
+
 mkdir -p $MONGODB_PATH/data/db
 
 docker build -t $DOCKER_TAG . && \
