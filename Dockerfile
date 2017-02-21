@@ -1,7 +1,4 @@
-from ubuntu:16.04
-
-# add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
-# RUN groupadd -r mongodb && useradd -r -g mongodb mongodb
+FROM ubuntu:16.04
 
 RUN \
    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
